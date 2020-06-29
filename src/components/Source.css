@@ -1,0 +1,15 @@
+.sourceContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px
+}
+
+.sourceContainer a {
+    text-decoration: none;
+    color: white;
+}
+
+.sourceContainer a:hover {
+    text-decoration: underline;
+}
