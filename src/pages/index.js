@@ -57,7 +57,7 @@ const IndexPage = () => {
     <>
       <ReactMapGL 
         {...viewport} 
-        mapboxApiAccessToken={process.env.GATSBY_MAPBOX_TOKEN}
+        mapboxApiAccessToken="pk.eyJ1Ijoia3NoaXZhbmt1IiwiYSI6ImNpejRqcnpjMTA0bXEyeHF3aGdhNGx2MjQifQ.-5YZ6vX9kAU3CbEQlSta5g"
         mapStyle="mapbox://styles/kshivanku/ck4vr9icb2z261clkwtwf076v"
         onViewportChange = {nextViewport => setViewport(nextViewport)}
       >
