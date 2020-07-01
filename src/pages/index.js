@@ -17,12 +17,17 @@ const IndexPage = () => {
 
   const [selectedCountry, setSelectedCountry] = useState(null)
 
-  const setBackgroundColor = (nrw) => {
-    if(nrw < 20) {
+  const setBackgroundColor = (nrw, coverage) => {
+    console.log(coverage)
+    if(nrw <= 10) {
       return "#47CF73"
-    } else if (nrw >= 40) {
+    } else if (nrw >= 30) {
       return "#FF3C41"
-    } else {
+    } 
+      else if(coverage < 95) {
+        return "#FF3C41"
+      }
+      else {
       return "#FCD000"
     }
   }
@@ -73,7 +78,7 @@ const IndexPage = () => {
                 // width: `${Number(item["Supplied population"])/10000000}px`,
                 // height: `${Number(item["Supplied population"])/10000000}px`,
                 // borderRadius: `${Number(item["Supplied population"])/10000000}px`,
-                backgroundColor:`${setBackgroundColor(Number(item['Level of NRW %']))}`
+                backgroundColor:`${setBackgroundColor(Number(item['Level of NRW %']), Number(item['% of urban population using piped water']))}`
               }}
               onClick = {() => {
                 setSelectedCountry(item)
