@@ -21,7 +21,7 @@ const IndexPage = () => {
     console.log(coverage)
     if(nrw <= 10) {
       return "#47CF73"
-    } else if (nrw >= 30) {
+    } else if (nrw >= 40) {
       return "#FF3C41"
     } 
       else if(coverage < 95) {
